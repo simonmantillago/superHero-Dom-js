@@ -1,31 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="app.js"></script>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>SuperHero DOM manipulation</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="js/bootstrap/bootstrap.bundle.js" defer></script>
+    <script type="module" src="app.js" defer></script>
+    <title>Document</title>
 </head>
+
 <body>
-    <div class="contaier">
-        <div class="item">
-            <label for="nombre">Name</label>
-            <input type="text" name="nombre" id="nameBox">
+    <div class="container">
+        <div class="row justify-content-md-center mt-3">
+            <div class="col col-lg-1">
+
+            </div>
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-header">
+                        Register your Hero
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Gestion de Heroes</h5>
+                        <div class="container">
+                            <form id="frmDataHero" class="needs-validation">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="characterName" class="form-label">Name</label>
+                                            <input type="text" class="form-control" name="characterName" id="characterName" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="characterName" class="form-label">Nombre Actor</label>
+                                            <input type="text" class="form-control" name="actorName" id="actorName" required="" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="age" class="form-label">Actor age</label>
+                                            <input type="text" class="form-control" name="age" id="age">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="characterName" class="form-label">Location</label>
+                                            <input type="text" class="form-control" name="cityName" id="cityName">
+                                            <div id="cityNameAux" class="form-text">Name of the city of origin </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="poster" class="form-label">Poster url</label>
+                                            <input type="text" class="form-control" name="poster" id="poster">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="dateAppears" class="form-label">Ubicacion</label>
+                                            <input type="date" class="form-control" name="dateAppears" id="dateAppears">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="producer" class="form-label">Productora</label>
+                                            <select id="producer" class="form-select" name="producer" id="producer">
+                                              <option value="Marvel">Marvel</option>
+                                              <option value="DC">DComics</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row" id="grpSuites">
+                                    <div class="col">
+                                        <div class="card mb-3" style="max-width: 100%;">
+                                            <div class="card-header">Suites</div>
+                                            <div class="card-body text-primary">
+                                                <h5 class="card-title">Hero suites</h5>
+                                                <a href="#" class="btn btn-warning" id="addSuite">+</a>
+                                                <div class="" style="width: 100%;">
+                                                        <div class="container body-detail">
+
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-dark" id="newHero">Add hero</button>
+                            <button type="button" class="btn btn-primary" id="addHero">Show heroes</button>
+                            <button type="button" class="btn btn-danger" id="cancelHero">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-1">
+
+            </div>
         </div>
-        <div class="item">
-            <label for="edad">Age</label>
-            <input type="number" name="edad" id="ageBox">
-        </div>
-        <div class="item">
-            <label for="codigo">Code name</label>
-            <input type="text" name="codigo" id="codeBox">
-        </div>
-        <div class="item">
-            <label for="traje" class="suitLabel">Suit</label>
-            <a href="#" class="btn" id="suitAdd" >+</a>
-        </div>
+
     </div>
 </body>
+
 </html>
